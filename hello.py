@@ -24,7 +24,7 @@ def upload_file():
         data = []
         for row in rr:
            app.logger.debug(row)
-           data.append(row[0])
+           data.append(row)
 
     return render_template('up.html', data=data)
 

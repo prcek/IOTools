@@ -1,13 +1,21 @@
-  <!doctype html>
-    <title>Upload new File</title>
-    <h1>Upload new File</h1>
-    <form action="" method=post enctype=multipart/form-data>
+<!doctype html>
+<title>Upload new File</title>
+<h1>Upload new File</h1>
+<form action="" method=post enctype=multipart/form-data>
       <p><input type=file name=file>
          <input type=submit value=Upload>
-    </form>
+</form>
+
     {% if data %}
-    <h1>Data out</h1>
+
+<h1>Data out</h1>
+	<table border=1>
     	{% for r in data %}
-    	<p>{{r}}</p>
+    	<tr>
+    		{% for c in r %}
+    		<td>{{c}}</td>
+    		{% endfor %}
+    	</tr>
     	{% endfor %}
-    {% endif %} 
+    </table>
+{% endif %} 
